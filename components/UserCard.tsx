@@ -7,10 +7,11 @@ type User = {
   id: number;
   firstName: string;
   lastName: string;
-  fullName?: string; // Optional if coming from mapped name
+  fullName?: string;
   email: string;
   age: number;
 };
+
 
 type Props = {
   user: User;
