@@ -35,13 +35,17 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => {
         const mappedUsers = data.users.map((user: any) => ({
-          id: user.id,
-          fullName: `${user.firstName} ${user.lastName}`,
-          email: user.email,
-          age: user.age,
-          department: departments[Math.floor(Math.random() * departments.length)],
-          rating: Math.floor(Math.random() * 5) + 1,
-        }));
+  id: user.id,
+  firstName: user.firstName, 
+  lastName: user.lastName,   
+  fullName: `${user.firstName} ${user.lastName}`,
+  email: user.email,
+  age: user.age,             
+  department: departments[Math.floor(Math.random() * departments.length)],
+  rating: Math.floor(Math.random() * 5) + 1,
+}));
+
+
 
         setUsers(mappedUsers);
       });
