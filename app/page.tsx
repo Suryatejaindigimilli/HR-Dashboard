@@ -9,12 +9,13 @@ import { useAppStore } from '@/store/useAppStore'; // ✅ Zustand store import
 
 type User = {
   id: number;
-  fullName: string;
+  firstName: string;
+  lastName: string;
+  fullName?: string;
   email: string;
   age: number;
-  department: string;
-  rating: number;
 };
+
 
 const departments = ['Engineering', 'HR', 'Marketing', 'Finance'];
 const ratings = [1, 2, 3, 4, 5];
