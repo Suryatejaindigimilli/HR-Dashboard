@@ -12,7 +12,6 @@ type User = {
   age: number;
 };
 
-
 type Props = {
   user: User;
 };
