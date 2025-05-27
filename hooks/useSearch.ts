@@ -2,11 +2,15 @@ import { useMemo } from 'react';
 
 interface User {
   id: number;
+  firstName: string;
+  lastName: string;
   fullName: string;
   email: string;
+  age: number;
   department: string;
   rating: number;
 }
+
 
 export function useSearch(users: User[], query: string, selectedDepartments: string[], selectedRatings: number[]) {
   return useMemo(() => {
